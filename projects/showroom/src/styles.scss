@@ -1,0 +1,84 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$showroom-primary: mat-palette($mat-indigo);
+$showroom-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$showroom-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$showroom-theme: mat-light-theme((
+  color: (
+    primary: $showroom-primary,
+    accent: $showroom-accent,
+    warn: $showroom-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($showroom-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+@import 'app/material/material.styles';
+@import 'app/core/core.styles';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$showroom-light-primary: mat-palette($mat-deep-purple);
+$showroom-light-accent: mat-palette($mat-amber, A200, A100, A400);
+$showroom-dark-primary: mat-palette($mat-pink, 700, 500, 900);
+$showroom-dark-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$showroom-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$showroom-light-theme: mat-light-theme($showroom-light-primary, $showroom-light-accent, $showroom-warn);
+$showroom-dark-theme: mat-dark-theme($showroom-dark-primary, $showroom-dark-accent, $showroom-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+body.app-light-theme {
+  @include angular-material-theme($showroom-light-theme);
+  @include material-ext-theme($showroom-light-theme);
+  @include core-theme($showroom-light-theme);
+}
+body.app-dark-theme {
+  @include angular-material-theme($showroom-dark-theme);
+  @include material-ext-theme($showroom-dark-theme);
+  @include core-theme($showroom-dark-theme);
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }  
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
