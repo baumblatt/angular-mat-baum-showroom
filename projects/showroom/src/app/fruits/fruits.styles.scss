@@ -1,9 +1,11 @@
 @import "./containers/entry/entry.container.theme";
 @import "./containers/juices/juices.container.theme";
 @import "./containers/candies/candies.container.theme";
+@import "./containers/juices-detail/juices-detail.dialog.theme";
 
 @mixin fruits-theme($theme) {
   @include app-entry-container-theme($theme);
   @include app-juices-container-theme($theme);
   @include app-candies-container-theme($theme);
+  @include app-juices-detail-dialog-theme($theme);
 }

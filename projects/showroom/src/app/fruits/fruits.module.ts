@@ -11,10 +11,11 @@ import { JuiceEffects } from './store/effects/juice.effects';
 import { CandiesEffects } from './store/effects/candies.effects';
 import { JuicesContainer } from './containers/juices/juices.container';
 import { CandiesContainer } from './containers/candies/candies.container';
+import { JuicesDetailDialog } from './containers/juices-detail/juices-detail.dialog';
 
 
 @NgModule({
-  declarations: [EntryContainer, JuicesContainer, CandiesContainer],
+  declarations: [EntryContainer, JuicesContainer, CandiesContainer, JuicesDetailDialog],
   imports: [
     CommonModule,
     FruitsRoutingModule,
