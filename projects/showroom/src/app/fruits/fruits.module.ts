@@ -9,10 +9,11 @@ import { EntryContainer } from './containers/entry/entry.container';
 import { EffectsModule } from '@ngrx/effects';
 import { JuiceEffects } from './store/effects/juice.effects';
 import { CandiesEffects } from './store/effects/candies.effects';
+import { JuicesContainer } from './containers/juices/juices.container';
 
 
 @NgModule({
-  declarations: [EntryContainer],
+  declarations: [EntryContainer, JuicesContainer],
   imports: [
     CommonModule,
     FruitsRoutingModule,

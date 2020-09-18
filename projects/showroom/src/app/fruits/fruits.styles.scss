@@ -1,5 +1,7 @@
 @import "./containers/entry/entry.container.theme";
+@import "./containers/juices/juices.container.theme";
 
 @mixin fruits-theme($theme) {
   @include app-entry-container-theme($theme);
+  @include app-juices-container-theme($theme);
 }
