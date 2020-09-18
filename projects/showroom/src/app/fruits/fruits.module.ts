@@ -8,6 +8,7 @@ import { fruitsReducers } from './store/reducers/feature.reducer';
 import { EntryContainer } from './containers/entry/entry.container';
 import { EffectsModule } from '@ngrx/effects';
 import { JuiceEffects } from './store/effects/juice.effects';
+import { CandiesEffects } from './store/effects/candies.effects';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { JuiceEffects } from './store/effects/juice.effects';
     FruitsRoutingModule,
     StoreModule.forFeature('fruits', fruitsReducers),
     SharedModule,
-    EffectsModule.forFeature([JuiceEffects])
+    EffectsModule.forFeature([JuiceEffects, CandiesEffects])
   ]
 })
 export class FruitsModule { }
