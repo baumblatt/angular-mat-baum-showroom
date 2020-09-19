@@ -10,6 +10,8 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { reducers, metaReducers } from './store/reducers/global.reducers';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireAnalyticsModule, ScreenTrackingService} from "@angular/fire/analytics";
 
 @NgModule({
   declarations: [
@@ -22,9 +24,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true }}),
     StoreDevtoolsModule.instrument({name: 'showroom', maxAge: 25, logOnly: environment.production}),
     StoreRouterConnectingModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule
   ],
-  providers: [],
+  providers: [ScreenTrackingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

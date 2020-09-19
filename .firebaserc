@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-mat-baum": {
+      "hosting": {
+        "showroom": [
+          "angular-mat-baum"
+        ]
+      }
+    }
+  }
+}
