@@ -1,7 +1,7 @@
 import {createAction, props} from '@ngrx/store';
 
 export const sampleAction = createAction(
-  '[fruits:juice] Sample action',
+  '[fruits:juices] Sample action',
   props<{ anything: string }>(),
 );
 

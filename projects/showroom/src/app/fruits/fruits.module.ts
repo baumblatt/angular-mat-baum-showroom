@@ -7,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { fruitsReducers } from './store/reducers/feature.reducer';
 import { EntryContainer } from './containers/entry/entry.container';
 import { EffectsModule } from '@ngrx/effects';
-import { JuiceEffects } from './store/effects/juice.effects';
+import { JuicesEffects } from './store/effects/juices.effects';
 import { CandiesEffects } from './store/effects/candies.effects';
 import { JuicesContainer } from './containers/juices/juices.container';
 import { CandiesContainer } from './containers/candies/candies.container';
@@ -22,7 +22,7 @@ import { CandiesDetailBottomSheet } from './containers/candies-detail/candies-de
     FruitsRoutingModule,
     StoreModule.forFeature('fruits', fruitsReducers),
     SharedModule,
-    EffectsModule.forFeature([JuiceEffects, CandiesEffects])
+    EffectsModule.forFeature([JuicesEffects, CandiesEffects])
   ]
 })
 export class FruitsModule { }

@@ -1,7 +1,7 @@
 import {createSelector} from '@ngrx/store';
 import {getFruitsState} from '../reducers/feature.reducer';
 
-const getJuiceState = createSelector(
+const getJuicesState = createSelector(
   getFruitsState,
-  state => state.juice
+  state => state.juices
 );

@@ -1,14 +1,14 @@
 import {ActionReducerMap, createFeatureSelector} from '@ngrx/store';
-import { juiceReducer, JuiceState } from './juice.reducers';
+import { juicesReducer, JuicesState } from './juices.reducers';
 import { candiesReducer, CandiesState } from './candies.reducers';
 
 export interface FruitsState {
-  juice: JuiceState;
+  juices: JuicesState;
   candies: CandiesState;
 }
 
 export const fruitsReducers: ActionReducerMap<FruitsState> = {
-  juice: juiceReducer,
+  juices: juicesReducer,
   candies: candiesReducer,
 };
 
